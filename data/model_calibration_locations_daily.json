@@ -1,0 +1,143 @@
+{
+  "providers": [
+    {
+      "modelName": "ECMWF IFS",
+      "previousRunsEndpoint": "https://previous-runs-api.open-meteo.com/v1/forecast",
+      "queryParams": {
+        "models": "ecmwf_ifs025"
+      }
+    },
+    {
+      "modelName": "NOAA GFS",
+      "previousRunsEndpoint": "https://previous-runs-api.open-meteo.com/v1/forecast",
+      "queryParams": {
+        "models": "gfs_seamless"
+      }
+    },
+    {
+      "modelName": "DWD ICON",
+      "previousRunsEndpoint": "https://previous-runs-api.open-meteo.com/v1/forecast",
+      "queryParams": {
+        "models": "icon_global"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "taiwan",
+      "name": "Taiwan and nearby islands",
+      "latitudeRange": [
+        21.7,
+        25.5
+      ],
+      "longitudeRange": [
+        119.0,
+        122.5
+      ]
+    },
+    {
+      "id": "east_asia",
+      "name": "East Asia sample belt",
+      "latitudeRange": [
+        20.0,
+        45.0
+      ],
+      "longitudeRange": [
+        110.0,
+        145.0
+      ]
+    },
+    {
+      "id": "north_america",
+      "name": "North America sample belt",
+      "latitudeRange": [
+        24.0,
+        55.0
+      ],
+      "longitudeRange": [
+        -130.0,
+        -65.0
+      ]
+    },
+    {
+      "id": "europe",
+      "name": "Europe sample belt",
+      "latitudeRange": [
+        35.0,
+        60.0
+      ],
+      "longitudeRange": [
+        -10.0,
+        30.0
+      ]
+    },
+    {
+      "id": "tropics",
+      "name": "Tropical sample belt",
+      "latitudeRange": [
+        -10.0,
+        25.0
+      ],
+      "longitudeRange": [
+        -180.0,
+        180.0
+      ]
+    },
+    {
+      "id": "southern_hemisphere",
+      "name": "Southern Hemisphere sample belt",
+      "latitudeRange": [
+        -45.0,
+        -10.0
+      ],
+      "longitudeRange": [
+        -180.0,
+        180.0
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "taipei",
+      "name": "Taipei",
+      "regionId": "taiwan",
+      "latitude": 25.0375,
+      "longitude": 121.5637
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "regionId": "east_asia",
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    },
+    {
+      "id": "new_york",
+      "name": "New York",
+      "regionId": "north_america",
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "regionId": "europe",
+      "latitude": 51.5072,
+      "longitude": -0.1276
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "regionId": "tropics",
+      "latitude": 1.3521,
+      "longitude": 103.8198
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "regionId": "southern_hemisphere",
+      "latitude": -33.8688,
+      "longitude": 151.2093
+    }
+  ]
+}

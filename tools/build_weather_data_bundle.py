@@ -26,6 +26,7 @@ def parse_args() -> argparse.Namespace:
         description="Build deployable WeatherAI model calibration and climate signal JSON files."
     )
     parser.add_argument("--output-dir", default="public/weatherai-data")
+    parser.add_argument("--locations", default="data/model_calibration_locations.json")
     parser.add_argument("--start-date", help="UTC model-calibration start date YYYY-MM-DD.")
     parser.add_argument("--end-date", help="UTC model-calibration end date YYYY-MM-DD.")
     parser.add_argument("--lead-days", default="1,2,3,5,7")
@@ -49,6 +50,8 @@ def main() -> int:
     model_command = [
         sys.executable,
         "tools/generate_model_calibration.py",
+        "--locations",
+        args.locations,
         "--output",
         str(model_path),
         "--lead-days",

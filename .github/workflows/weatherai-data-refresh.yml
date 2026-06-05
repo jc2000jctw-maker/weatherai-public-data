@@ -3,6 +3,14 @@ name: WeatherAI Data Refresh
 on:
   workflow_dispatch:
     inputs:
+      calibration_profile:
+        description: "Calibration profile: daily or full"
+        required: false
+        default: "daily"
+        type: choice
+        options:
+          - daily
+          - full
       start_date:
         description: "Calibration start date, YYYY-MM-DD"
         required: false
@@ -13,6 +21,7 @@ on:
         type: string
   schedule:
     - cron: "45 18 * * *"
+    - cron: "45 19 * * 0"
 
 permissions:
   contents: read
@@ -34,14 +43,28 @@ jobs:
 
       - name: Build WeatherAI data bundle
         run: |
+          PROFILE="${{ inputs.calibration_profile }}"
+          if [ -z "$PROFILE" ]; then
+            PROFILE="daily"
+          fi
+          if [ "${{ github.event.schedule }}" = "45 19 * * 0" ]; then
+            PROFILE="full"
+          fi
+          LOCATIONS_FILE="data/model_calibration_locations_daily.json"
+          if [ "$PROFILE" = "full" ]; then
+            LOCATIONS_FILE="data/model_calibration_locations.json"
+          fi
+          echo "Calibration profile: $PROFILE"
+          echo "Locations file: $LOCATIONS_FILE"
           ARGS=(
             --output-dir public/weatherai-data
+            --locations "$LOCATIONS_FILE"
             --lead-days 1,2,3,5,7
             --min-samples 48
             --ttl-hours 168
-            --request-timeout 60
-            --retry-count 3
-            --retry-backoff-seconds 3
+            --request-timeout 25
+            --retry-count 2
+            --retry-backoff-seconds 2
           )
           if [ -n "${{ inputs.start_date }}" ]; then
             ARGS+=(--start-date "${{ inputs.start_date }}")
