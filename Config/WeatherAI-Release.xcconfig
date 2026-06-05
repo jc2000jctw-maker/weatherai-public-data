@@ -3,7 +3,7 @@
 // Example:
 // WEATHER_DATA_MANIFEST_URL = https:/$()/example.com/weatherai-data/manifest.json
 
-WEATHER_DATA_MANIFEST_URL =
+WEATHER_DATA_MANIFEST_URL = https:/$()/jc2000jctw-maker.github.io/weatherai-public-data/weatherai-data/manifest.json
 WEATHER_MODEL_CALIBRATION_URL =
 WEATHER_CLIMATE_SIGNAL_URL =
 CWA_API_KEY =
