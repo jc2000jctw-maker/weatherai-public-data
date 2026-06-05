@@ -1,7 +1,7 @@
 {
   "status": "warning",
-  "checkedAt": "2026-06-05T00:58:41Z",
-  "releaseManifestURL": "",
+  "checkedAt": "2026-06-05T01:14:06Z",
+  "releaseManifestURL": "https://jc2000jctw-maker.github.io/weatherai-public-data/weatherai-data/manifest.json",
   "checks": [
     {
       "status": "OK",
@@ -34,9 +34,9 @@
       "detail": "empty; manifest is the single data source"
     },
     {
-      "status": "WARN",
+      "status": "OK",
       "title": "release manifest URL",
-      "detail": "Config/WeatherAI-Release.xcconfig WEATHER_DATA_MANIFEST_URL is empty; allowed for data-refresh report only"
+      "detail": "https://jc2000jctw-maker.github.io/weatherai-public-data/weatherai-data/manifest.json"
     }
   ],
   "qualitySummary": {
