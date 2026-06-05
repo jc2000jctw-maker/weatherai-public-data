@@ -1,0 +1,9 @@
+// WeatherAI Release runtime data configuration.
+// Set WEATHER_DATA_MANIFEST_URL to the deployed HTTPS manifest before App Store builds.
+// Example:
+// WEATHER_DATA_MANIFEST_URL = https:/$()/example.com/weatherai-data/manifest.json
+
+WEATHER_DATA_MANIFEST_URL =
+WEATHER_MODEL_CALIBRATION_URL =
+WEATHER_CLIMATE_SIGNAL_URL =
+CWA_API_KEY =

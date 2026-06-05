@@ -1,0 +1,159 @@
+{
+  "status": "warning",
+  "checkedAt": "2026-06-05T00:58:41Z",
+  "releaseManifestURL": "",
+  "checks": [
+    {
+      "status": "OK",
+      "title": "local production bundle",
+      "detail": "WeatherAI data bundle passed quality gates: 42 model entries, climate phase 'ENSO background + MJO/GTH background + La Niña Update'."
+    },
+    {
+      "status": "OK",
+      "title": "manifest quality summary",
+      "detail": "trainingWindowDays=33, minSampleCount=1584, minSampleConfidence=0.971, maxAbsoluteRainBiasCorrection=0.08, climateSourceSuccessCount=3"
+    },
+    {
+      "status": "WARN",
+      "title": "climate source coverage",
+      "detail": "3/4 official sources usable; degraded: INCOIS IOD"
+    },
+    {
+      "status": "OK",
+      "title": "expected app data mode",
+      "detail": "遠端校準"
+    },
+    {
+      "status": "OK",
+      "title": "daily refresh workflow",
+      "detail": "builds, validates, deploys, and verifies hosted manifest"
+    },
+    {
+      "status": "OK",
+      "title": "release direct URL overrides",
+      "detail": "empty; manifest is the single data source"
+    },
+    {
+      "status": "WARN",
+      "title": "release manifest URL",
+      "detail": "Config/WeatherAI-Release.xcconfig WEATHER_DATA_MANIFEST_URL is empty; allowed for data-refresh report only"
+    }
+  ],
+  "qualitySummary": {
+    "status": "generated",
+    "validationProfile": "deployment-default",
+    "modelEntryCount": 42,
+    "globalEntryCount": 6,
+    "regionalEntryCount": 36,
+    "regionalGroupCount": 6,
+    "minRegionalEntryCount": 6,
+    "trainingWindowDays": 33,
+    "minSampleCount": 1584,
+    "maxTemperatureMAE": 2.479,
+    "maxRainBrierScore": 0.1838,
+    "maxAbsoluteRainBiasCorrection": 0.08,
+    "minSampleConfidence": 0.971,
+    "maxRawWeightMultiplier": 1.35,
+    "maxFinalWeightDelta": 0.347,
+    "requiredMinSampleCount": 48,
+    "climateSourceCount": 6,
+    "climateSourceAttemptCount": 4,
+    "climateSourceSuccessCount": 3,
+    "climateSourceFailureCount": 1,
+    "climateSourceNoSignalCount": 0,
+    "climateConfidencePenalty": 6,
+    "climateUncertaintyShrinkBonus": 0.06
+  },
+  "healthSummary": {
+    "generatedAt": "2026-06-05T00:45:20Z",
+    "modelCalibration": {
+      "version": "openmeteo-prev-runs-20260605T004254Z",
+      "updatedAt": "2026-06-05T00:42:54Z",
+      "ttlHours": 168
+    },
+    "climateSignal": {
+      "phase": "ENSO background + MJO/GTH background + La Niña Update",
+      "updatedAt": "NOAA CPC latest CPC update / NOAA CPC GTH 06/02/26 / WMO 2 June 2026",
+      "sourceStatusSummary": {
+        "attempted": 4,
+        "ok": 3,
+        "failed": 1,
+        "no_signal": 0
+      },
+      "sourceStatus": [
+        {
+          "name": "NOAA CPC ENSO",
+          "url": "https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/strengths.php",
+          "status": "ok"
+        },
+        {
+          "name": "NOAA CPC GTH",
+          "url": "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/ghaz/index.php",
+          "status": "ok"
+        },
+        {
+          "name": "WMO ENSO",
+          "url": "https://wmo.int/publication-series/el-ninola-nina-updates",
+          "status": "ok"
+        },
+        {
+          "name": "INCOIS IOD",
+          "url": "https://services.incois.gov.in/portal/IOD",
+          "status": "failed",
+          "error": "Failed to fetch https://services.incois.gov.in/portal/IOD: <urlopen error timed out>"
+        }
+      ],
+      "failedSources": [
+        "INCOIS IOD"
+      ],
+      "noSignalSources": []
+    },
+    "freshness": {
+      "refreshCadenceHours": 24,
+      "maxBundleAgeHours": 192,
+      "nextRecommendedRefreshAt": "2026-06-06T00:45:20Z",
+      "staleAfter": "2026-06-13T00:45:20Z",
+      "modelExpiresAt": "2026-06-12T00:42:54Z",
+      "climateGeneratedAt": "2026-06-05T00:45:20Z"
+    },
+    "modelPerformanceSummary": {
+      "rankingMetric": "sample-weighted average combinedError; lower is better",
+      "modelCount": 3,
+      "models": [
+        {
+          "modelName": "ECMWF IFS",
+          "entryCount": 14,
+          "sampleCount": 150480,
+          "averageTemperatureMAE": 1.252,
+          "averageRainBrierScore": 0.1221,
+          "averageRainBiasCorrection": 0.0591,
+          "maxAbsoluteRainBiasCorrection": 0.08,
+          "averageCombinedError": 1.985,
+          "averageWeightMultiplier": 1.161
+        },
+        {
+          "modelName": "DWD ICON",
+          "entryCount": 14,
+          "sampleCount": 120384,
+          "averageTemperatureMAE": 1.381,
+          "averageRainBrierScore": 0.1356,
+          "averageRainBiasCorrection": 0.0744,
+          "maxAbsoluteRainBiasCorrection": 0.08,
+          "averageCombinedError": 2.195,
+          "averageWeightMultiplier": 0.997
+        },
+        {
+          "modelName": "NOAA GFS",
+          "entryCount": 14,
+          "sampleCount": 150480,
+          "averageTemperatureMAE": 1.601,
+          "averageRainBrierScore": 0.1383,
+          "averageRainBiasCorrection": 0.0758,
+          "maxAbsoluteRainBiasCorrection": 0.08,
+          "averageCombinedError": 2.4304,
+          "averageWeightMultiplier": 0.938
+        }
+      ]
+    }
+  }
+}

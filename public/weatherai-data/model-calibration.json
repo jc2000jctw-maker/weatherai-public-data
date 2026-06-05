@@ -1,0 +1,687 @@
+{
+  "version": "openmeteo-prev-runs-20260605T004254Z",
+  "updatedAt": "2026-06-05T00:42:54Z",
+  "ttlHours": 168,
+  "trainingWindow": {
+    "startDate": "2026-05-01",
+    "endDate": "2026-06-02",
+    "days": 33
+  },
+  "sourceSummary": "Generated from Open-Meteo Previous Runs forecasts scored against Open-Meteo Historical Weather archive observations, 2026-05-01 to 2026-06-02 UTC. Weight and rain-bias changes are sample-confidence shrunk toward neutral at 96 samples.",
+  "global": [
+    {
+      "modelName": "ECMWF IFS",
+      "leadTimeMaxHours": 72,
+      "weightMultiplier": 1.253,
+      "rainBiasCorrection": 0.062,
+      "sampleCount": 45144,
+      "temperatureMAE": 0.986,
+      "rainBrierScore": 0.1125,
+      "combinedError": 1.6609,
+      "referenceError": 2.0808,
+      "sampleConfidence": 0.999,
+      "rawWeightMultiplier": 1.253,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    },
+    {
+      "modelName": "NOAA GFS",
+      "leadTimeMaxHours": 72,
+      "weightMultiplier": 0.963,
+      "rainBiasCorrection": 0.08,
+      "sampleCount": 45144,
+      "temperatureMAE": 1.371,
+      "rainBrierScore": 0.1316,
+      "combinedError": 2.1609,
+      "referenceError": 2.0808,
+      "sampleConfidence": 0.999,
+      "rawWeightMultiplier": 0.963,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    },
+    {
+      "modelName": "DWD ICON",
+      "leadTimeMaxHours": 72,
+      "weightMultiplier": 1.0,
+      "rainBiasCorrection": 0.08,
+      "sampleCount": 45144,
+      "temperatureMAE": 1.282,
+      "rainBrierScore": 0.1332,
+      "combinedError": 2.0808,
+      "referenceError": 2.0808,
+      "sampleConfidence": 0.999,
+      "rawWeightMultiplier": 1.0,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    },
+    {
+      "modelName": "ECMWF IFS",
+      "leadTimeMaxHours": 240,
+      "weightMultiplier": 1.027,
+      "rainBiasCorrection": 0.061,
+      "sampleCount": 30096,
+      "temperatureMAE": 1.651,
+      "rainBrierScore": 0.1366,
+      "combinedError": 2.471,
+      "referenceError": 2.5378,
+      "sampleConfidence": 0.998,
+      "rawWeightMultiplier": 1.027,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    },
+    {
+      "modelName": "NOAA GFS",
+      "leadTimeMaxHours": 240,
+      "weightMultiplier": 0.895,
+      "rainBiasCorrection": 0.08,
+      "sampleCount": 30096,
+      "temperatureMAE": 1.945,
+      "rainBrierScore": 0.1483,
+      "combinedError": 2.8346,
+      "referenceError": 2.5378,
+      "sampleConfidence": 0.998,
+      "rawWeightMultiplier": 0.895,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    },
+    {
+      "modelName": "DWD ICON",
+      "leadTimeMaxHours": 240,
+      "weightMultiplier": 1.0,
+      "rainBiasCorrection": 0.08,
+      "sampleCount": 15048,
+      "temperatureMAE": 1.68,
+      "rainBrierScore": 0.1429,
+      "combinedError": 2.5378,
+      "referenceError": 2.5378,
+      "sampleConfidence": 0.997,
+      "rawWeightMultiplier": 1.0,
+      "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+    }
+  ],
+  "regional": [
+    {
+      "id": "east_asia",
+      "name": "East Asia sample belt",
+      "latitudeRange": [
+        20.0,
+        45.0
+      ],
+      "longitudeRange": [
+        110.0,
+        145.0
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.347,
+          "rainBiasCorrection": 0.022,
+          "sampleCount": 4752,
+          "temperatureMAE": 0.939,
+          "rainBrierScore": 0.0687,
+          "combinedError": 1.3507,
+          "referenceError": 1.972,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 1.35,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.904,
+          "rainBiasCorrection": 0.039,
+          "sampleCount": 4752,
+          "temperatureMAE": 1.665,
+          "rainBrierScore": 0.0867,
+          "combinedError": 2.1849,
+          "referenceError": 1.972,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 0.903,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.034,
+          "sampleCount": 4752,
+          "temperatureMAE": 1.49,
+          "rainBrierScore": 0.0803,
+          "combinedError": 1.972,
+          "referenceError": 1.972,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.102,
+          "rainBiasCorrection": 0.024,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.931,
+          "rainBrierScore": 0.1054,
+          "combinedError": 2.5633,
+          "referenceError": 2.8284,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 1.103,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.906,
+          "rainBiasCorrection": 0.056,
+          "sampleCount": 3168,
+          "temperatureMAE": 2.479,
+          "rainBrierScore": 0.1077,
+          "combinedError": 3.1253,
+          "referenceError": 2.8284,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 0.905,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.028,
+          "sampleCount": 1584,
+          "temperatureMAE": 2.209,
+          "rainBrierScore": 0.1032,
+          "combinedError": 2.8284,
+          "referenceError": 2.8284,
+          "sampleConfidence": 0.971,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    },
+    {
+      "id": "europe",
+      "name": "Europe sample belt",
+      "latitudeRange": [
+        35.0,
+        60.0
+      ],
+      "longitudeRange": [
+        -10.0,
+        30.0
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.211,
+          "rainBiasCorrection": 0.052,
+          "sampleCount": 7128,
+          "temperatureMAE": 0.958,
+          "rainBrierScore": 0.093,
+          "combinedError": 1.5163,
+          "referenceError": 1.8389,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 1.213,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.911,
+          "rainBiasCorrection": 0.058,
+          "sampleCount": 7128,
+          "temperatureMAE": 1.385,
+          "rainBrierScore": 0.106,
+          "combinedError": 2.0206,
+          "referenceError": 1.8389,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 0.91,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.063,
+          "sampleCount": 7128,
+          "temperatureMAE": 1.205,
+          "rainBrierScore": 0.1056,
+          "combinedError": 1.8389,
+          "referenceError": 1.8389,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.05,
+          "sampleCount": 4752,
+          "temperatureMAE": 2.089,
+          "rainBrierScore": 0.1187,
+          "combinedError": 2.8006,
+          "referenceError": 2.8006,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.912,
+          "rainBiasCorrection": 0.074,
+          "sampleCount": 4752,
+          "temperatureMAE": 2.318,
+          "rainBrierScore": 0.1261,
+          "combinedError": 3.0747,
+          "referenceError": 2.8006,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 0.911,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.048,
+          "rainBiasCorrection": 0.065,
+          "sampleCount": 2376,
+          "temperatureMAE": 1.911,
+          "rainBrierScore": 0.1264,
+          "combinedError": 2.6697,
+          "referenceError": 2.8006,
+          "sampleConfidence": 0.98,
+          "rawWeightMultiplier": 1.049,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    },
+    {
+      "id": "north_america",
+      "name": "North America sample belt",
+      "latitudeRange": [
+        24.0,
+        55.0
+      ],
+      "longitudeRange": [
+        -130.0,
+        -65.0
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.244,
+          "rainBiasCorrection": 0.057,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.087,
+          "rainBrierScore": 0.1085,
+          "combinedError": 1.7375,
+          "referenceError": 2.1631,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.245,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.898,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.624,
+          "rainBrierScore": 0.1309,
+          "combinedError": 2.41,
+          "referenceError": 2.1631,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 0.898,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.388,
+          "rainBrierScore": 0.1292,
+          "combinedError": 2.1631,
+          "referenceError": 2.1631,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.055,
+          "sampleCount": 6336,
+          "temperatureMAE": 2.099,
+          "rainBrierScore": 0.131,
+          "combinedError": 2.8853,
+          "referenceError": 2.8853,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.886,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 6336,
+          "temperatureMAE": 2.437,
+          "rainBrierScore": 0.1371,
+          "combinedError": 3.259,
+          "referenceError": 2.8853,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 0.885,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.093,
+          "rainBiasCorrection": 0.07,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.827,
+          "rainBrierScore": 0.1349,
+          "combinedError": 2.636,
+          "referenceError": 2.8853,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 1.095,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    },
+    {
+      "id": "southern_hemisphere",
+      "name": "Southern Hemisphere sample belt",
+      "latitudeRange": [
+        -45.0,
+        -10.0
+      ],
+      "longitudeRange": [
+        -180.0,
+        180.0
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.256,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 0.798,
+          "rainBrierScore": 0.1358,
+          "combinedError": 1.6132,
+          "referenceError": 2.0288,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.258,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.091,
+          "rainBrierScore": 0.1563,
+          "combinedError": 2.0288,
+          "referenceError": 2.0288,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.933,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.178,
+          "rainBrierScore": 0.1661,
+          "combinedError": 2.1744,
+          "referenceError": 2.0288,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 0.933,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.136,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 6336,
+          "temperatureMAE": 1.274,
+          "rainBrierScore": 0.1661,
+          "combinedError": 2.2699,
+          "referenceError": 2.5814,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 1.137,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.941,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 6336,
+          "temperatureMAE": 1.641,
+          "rainBrierScore": 0.1838,
+          "combinedError": 2.7439,
+          "referenceError": 2.5814,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 0.941,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.527,
+          "rainBrierScore": 0.1757,
+          "combinedError": 2.5814,
+          "referenceError": 2.5814,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    },
+    {
+      "id": "taiwan",
+      "name": "Taiwan and nearby islands",
+      "latitudeRange": [
+        21.7,
+        25.5
+      ],
+      "longitudeRange": [
+        119.0,
+        122.5
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.024,
+          "rainBiasCorrection": 0.042,
+          "sampleCount": 4752,
+          "temperatureMAE": 1.103,
+          "rainBrierScore": 0.0997,
+          "combinedError": 1.7011,
+          "referenceError": 1.7427,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 1.024,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.05,
+          "sampleCount": 4752,
+          "temperatureMAE": 1.112,
+          "rainBrierScore": 0.1052,
+          "combinedError": 1.7427,
+          "referenceError": 1.7427,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.957,
+          "rainBiasCorrection": 0.055,
+          "sampleCount": 4752,
+          "temperatureMAE": 1.181,
+          "rainBrierScore": 0.1068,
+          "combinedError": 1.8218,
+          "referenceError": 1.7427,
+          "sampleConfidence": 0.99,
+          "rawWeightMultiplier": 0.957,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.972,
+          "rainBiasCorrection": 0.022,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.38,
+          "rainBrierScore": 0.1272,
+          "combinedError": 2.1436,
+          "referenceError": 2.0825,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 0.971,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.076,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.315,
+          "rainBrierScore": 0.128,
+          "combinedError": 2.0825,
+          "referenceError": 2.0825,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.025,
+          "rainBiasCorrection": 0.046,
+          "sampleCount": 1584,
+          "temperatureMAE": 1.294,
+          "rainBrierScore": 0.1226,
+          "combinedError": 2.0295,
+          "referenceError": 2.0825,
+          "sampleConfidence": 0.971,
+          "rawWeightMultiplier": 1.026,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    },
+    {
+      "id": "tropics",
+      "name": "Tropical sample belt",
+      "latitudeRange": [
+        -10.0,
+        25.0
+      ],
+      "longitudeRange": [
+        -180.0,
+        180.0
+      ],
+      "entries": [
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.209,
+          "rainBiasCorrection": 0.067,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.058,
+          "rainBrierScore": 0.1362,
+          "combinedError": 1.8756,
+          "referenceError": 2.2701,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.21,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 0.968,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.373,
+          "rainBrierScore": 0.1622,
+          "combinedError": 2.3462,
+          "referenceError": 2.2701,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 0.968,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 72,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.08,
+          "sampleCount": 9504,
+          "temperatureMAE": 1.282,
+          "rainBrierScore": 0.1646,
+          "combinedError": 2.2701,
+          "referenceError": 2.2701,
+          "sampleConfidence": 0.995,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "ECMWF IFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.129,
+          "rainBiasCorrection": 0.065,
+          "sampleCount": 6336,
+          "temperatureMAE": 1.25,
+          "rainBrierScore": 0.1464,
+          "combinedError": 2.1283,
+          "referenceError": 2.4057,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 1.13,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "NOAA GFS",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 0.943,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 6336,
+          "temperatureMAE": 1.525,
+          "rainBrierScore": 0.171,
+          "combinedError": 2.5515,
+          "referenceError": 2.4057,
+          "sampleConfidence": 0.993,
+          "rawWeightMultiplier": 0.943,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        },
+        {
+          "modelName": "DWD ICON",
+          "leadTimeMaxHours": 240,
+          "weightMultiplier": 1.0,
+          "rainBiasCorrection": 0.079,
+          "sampleCount": 3168,
+          "temperatureMAE": 1.441,
+          "rainBrierScore": 0.1607,
+          "combinedError": 2.4057,
+          "referenceError": 2.4057,
+          "sampleConfidence": 0.985,
+          "rawWeightMultiplier": 1.0,
+          "calibrationMethod": "median-relative-error-with-sample-confidence-shrinkage"
+        }
+      ]
+    }
+  ]
+}

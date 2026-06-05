@@ -1,0 +1,41 @@
+{
+  "phase": "ENSO background + MJO/GTH background + La Niña Update",
+  "probability": 0.6,
+  "updatedAt": "NOAA CPC latest CPC update / NOAA CPC GTH 06/02/26 / WMO 2 June 2026",
+  "summary": "NOAA CPC ENSO 未提供可解析的聖嬰/反聖嬰機率，僅作低權重季節背景訊號。 NOAA CPC GTH 週尺度展望有效期 06/10/26 - 06/23/26，含熱帶降雨背景訊號，含熱帶氣旋生成背景訊號。 WMO 最新 ENSO 更新 機率顯示反聖嬰風險偏高，作為季節背景校準。",
+  "uncertaintyShrinkBonus": 0.06,
+  "confidencePenalty": 6,
+  "sourceDetails": [
+    "NOAA CPC ENSO strength probabilities",
+    "https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/strengths.php",
+    "NOAA CPC Global Tropics Hazards Outlook",
+    "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/ghaz/index.php",
+    "WMO El Niño/La Niña Updates",
+    "https://wmo.int/publication-series/el-ninola-nina-updates"
+  ],
+  "sourceStatus": [
+    {
+      "name": "NOAA CPC ENSO",
+      "url": "https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/strengths.php",
+      "status": "ok"
+    },
+    {
+      "name": "NOAA CPC GTH",
+      "url": "https://www.cpc.ncep.noaa.gov/products/precip/CWlink/ghaz/index.php",
+      "status": "ok"
+    },
+    {
+      "name": "WMO ENSO",
+      "url": "https://wmo.int/publication-series/el-ninola-nina-updates",
+      "status": "ok"
+    },
+    {
+      "name": "INCOIS IOD",
+      "url": "https://services.incois.gov.in/portal/IOD",
+      "status": "failed",
+      "error": "Failed to fetch https://services.incois.gov.in/portal/IOD: <urlopen error timed out>"
+    }
+  ],
+  "generatedAt": "2026-06-05T00:45:20Z",
+  "generator": "tools/generate_climate_signal.py"
+}

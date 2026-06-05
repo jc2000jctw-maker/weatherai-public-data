@@ -1,0 +1,111 @@
+name: WeatherAI Data Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Calibration start date, YYYY-MM-DD"
+        required: false
+        type: string
+      end_date:
+        description: "Calibration end date, YYYY-MM-DD"
+        required: false
+        type: string
+  schedule:
+    - cron: "45 18 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: weatherai-data-pages
+  cancel-in-progress: false
+
+jobs:
+  build-data-bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build WeatherAI data bundle
+        run: |
+          ARGS=(
+            --output-dir public/weatherai-data
+            --lead-days 1,2,3,5,7
+            --min-samples 48
+            --ttl-hours 168
+            --request-timeout 60
+            --retry-count 3
+            --retry-backoff-seconds 3
+          )
+          if [ -n "${{ inputs.start_date }}" ]; then
+            ARGS+=(--start-date "${{ inputs.start_date }}")
+          fi
+          if [ -n "${{ inputs.end_date }}" ]; then
+            ARGS+=(--end-date "${{ inputs.end_date }}")
+          fi
+          python3 tools/build_weather_data_bundle.py "${ARGS[@]}"
+
+      - name: Validate generated data quality
+        run: |
+          python3 -m json.tool public/weatherai-data/model-calibration.json >/dev/null
+          python3 -m json.tool public/weatherai-data/climate-signal.json >/dev/null
+          python3 -m json.tool public/weatherai-data/manifest.json >/dev/null
+          python3 -m json.tool public/weatherai-data/health.json >/dev/null
+          python3 tools/validate_weather_data_bundle.py \
+            --bundle-dir public/weatherai-data \
+            --min-entry-samples 48 \
+            --min-climate-source-successes 2
+          python3 tools/test_weather_data_integrity.py \
+            --bundle-dir public/weatherai-data
+
+      - name: Write WeatherAI readiness report
+        run: |
+          python3 tools/audit_weatherai_release_readiness.py \
+            --skip-release-preflight \
+            --allow-empty-release-url \
+            --report-json outputs/weatherai_release_readiness.json
+          python3 -m json.tool outputs/weatherai_release_readiness.json >/dev/null
+
+      - name: Upload WeatherAI data bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: weatherai-data-bundle
+          path: |
+            public/weatherai-data
+            outputs/weatherai_release_readiness.json
+          if-no-files-found: error
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy-pages:
+    needs: build-data-bundle
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}weatherai-data/manifest.json
+
+    steps:
+      - name: Deploy WeatherAI data to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Check out repository for hosted verification
+        uses: actions/checkout@v4
+
+      - name: Verify deployed WeatherAI manifest
+        run: |
+          python3 tools/verify_release_weather_config.py \
+            --manifest-url "${{ steps.deployment.outputs.page_url }}weatherai-data/manifest.json" \
+            --request-timeout 30 \
+            --retry-count 5 \
+            --retry-backoff-seconds 6

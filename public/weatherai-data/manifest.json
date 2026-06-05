@@ -1,0 +1,54 @@
+{
+  "version": "2026-06-05T00:45:20Z",
+  "generatedAt": "2026-06-05T00:45:20Z",
+  "files": {
+    "modelCalibration": {
+      "path": "model-calibration.json",
+      "sha256": "deef31994b00ccf39dd00a38c15ddf024a7b042f86da0da64ba922c1fbe61e7e",
+      "version": "openmeteo-prev-runs-20260605T004254Z",
+      "updatedAt": "2026-06-05T00:42:54Z",
+      "ttlHours": 168
+    },
+    "climateSignal": {
+      "path": "climate-signal.json",
+      "sha256": "6dbf02ff04b0522dfe7e097a6a1bd3d8085f5ff515674e62dd35c2c88ccd57fb",
+      "phase": "ENSO background + MJO/GTH background + La Niña Update",
+      "updatedAt": "NOAA CPC latest CPC update / NOAA CPC GTH 06/02/26 / WMO 2 June 2026"
+    },
+    "health": {
+      "path": "health.json",
+      "sha256": "fe09d3c0efcc012451c8a71930ec885a0610c57182ba6c36a520f45e4fa7a4b6"
+    }
+  },
+  "qualitySummary": {
+    "status": "generated",
+    "validationProfile": "deployment-default",
+    "modelEntryCount": 42,
+    "globalEntryCount": 6,
+    "regionalEntryCount": 36,
+    "regionalGroupCount": 6,
+    "minRegionalEntryCount": 6,
+    "trainingWindowDays": 33,
+    "minSampleCount": 1584,
+    "maxTemperatureMAE": 2.479,
+    "maxRainBrierScore": 0.1838,
+    "maxAbsoluteRainBiasCorrection": 0.08,
+    "minSampleConfidence": 0.971,
+    "maxRawWeightMultiplier": 1.35,
+    "maxFinalWeightDelta": 0.347,
+    "requiredMinSampleCount": 48,
+    "climateSourceCount": 6,
+    "climateSourceAttemptCount": 4,
+    "climateSourceSuccessCount": 3,
+    "climateSourceFailureCount": 1,
+    "climateSourceNoSignalCount": 0,
+    "climateConfidencePenalty": 6,
+    "climateUncertaintyShrinkBonus": 0.06
+  },
+  "appBuildSettings": {
+    "preferred": "WEATHER_DATA_MANIFEST_URL",
+    "WEATHER_DATA_MANIFEST_URL": "manifest.json",
+    "WEATHER_MODEL_CALIBRATION_URL": "model-calibration.json",
+    "WEATHER_CLIMATE_SIGNAL_URL": "climate-signal.json"
+  }
+}
